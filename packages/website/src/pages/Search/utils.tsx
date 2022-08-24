@@ -30,6 +30,7 @@ export function useSearch(fieldName: string, queryBuilder: (value: string) => st
           const resp = await gapi.client.drive.files.list({
             pageToken,
             corpora: 'allDrives ',
+            // TODO: driveId: REACT_APP_ROOT_DRIVE_ID,
             includeItemsFromAllDrives: true,
             supportsAllDrives: true,
             pageSize: 500,
